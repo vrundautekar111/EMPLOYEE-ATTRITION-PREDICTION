@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Attrition Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <h1>Employee Attrition Prediction System</h1>
+
+    <p class="subtitle">
+        Machine Learning Based Employee Retention Analysis
+    </p>
+
+
+    <form id="predictionForm">
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>Age</label>
+
+                <input
+                    type="number"
+                    id="age"
+                    required
+                    min="18"
+                    max="70"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Monthly Income</label>
+
+                <input
+                    type="number"
+                    id="monthly_income"
+                    required
+                    min="100"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Job Level</label>
+
+                <select id="job_level">
+
+                    <option value="1">Level 1</option>
+
+                    <option value="2">Level 2</option>
+
+                    <option value="3">Level 3</option>
+
+                    <option value="4">Level 4</option>
+
+                    <option value="5">Level 5</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Years At Company</label>
+
+                <input
+                    type="number"
+                    id="years_at_company"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Years In Current Role</label>
+
+                <input
+                    type="number"
+                    id="years_current_role"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Years Since Last Promotion</label>
+
+                <input
+                    type="number"
+                    id="years_promotion"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Years With Current Manager</label>
+
+                <input
+                    type="number"
+                    id="years_manager"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Job Satisfaction</label>
+
+                <select id="job_satisfaction">
+
+                    <option value="1">
+                        1 - Low
+                    </option>
+
+                    <option value="2">
+                        2 - Medium
+                    </option>
+
+                    <option value="3">
+                        3 - High
+                    </option>
+
+                    <option value="4">
+                        4 - Very High
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Environment Satisfaction</label>
+
+                <select id="environment_satisfaction">
+
+                    <option value="1">1 - Low</option>
+
+                    <option value="2">2 - Medium</option>
+
+                    <option value="3">3 - High</option>
+
+                    <option value="4">4 - Very High</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Work Life Balance</label>
+
+                <select id="work_life_balance">
+
+                    <option value="1">1 - Bad</option>
+
+                    <option value="2">2 - Good</option>
+
+                    <option value="3">3 - Better</option>
+
+                    <option value="4">4 - Best</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Overtime</label>
+
+                <select id="overtime">
+
+                    <option value="No">No</option>
+
+                    <option value="Yes">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Distance From Home</label>
+
+                <input
+                    type="number"
+                    id="distance_from_home"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Number Of Companies Worked</label>
+
+                <input
+                    type="number"
+                    id="companies_worked"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Training Times Last Year</label>
+
+                <input
+                    type="number"
+                    id="training"
+                    required
+                    min="0"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <button type="submit">
+
+            Predict Employee Attrition
+
+        </button>
+
+
+    </form>
+
+
+    <div id="loading">
+
+        Predicting...
+
+    </div>
+
+
+    <div id="result" class="result">
+
+        <h2 id="prediction"></h2>
+
+        <h3 id="risk"></h3>
+
+        <p>
+            Attrition Probability:
+            <strong id="probability"></strong>
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+
+</body>
+
+</html>
