@@ -21,7 +21,7 @@ Attrition probability estimation
 High-risk / Low-risk classification
 Flask backend API
 HTML, CSS and JavaScript frontend
-Model evaluation using accuracy and classification metrics
+Model evaluation using accuracy and classification metrics 
 Saved trained model using Joblib
 🛠️ Technologies Used
 Python
