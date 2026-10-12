@@ -16,7 +16,7 @@ Demonstrate an end-to-end Machine Learning deployment workflow.
  Features
 Employee data input through a web interface
 Machine Learning-based prediction
-Random Forest classification algorithm
+Random Forest classification algorithm 
 Attrition probability estimation
 High-risk / Low-risk classification
 Flask backend API
