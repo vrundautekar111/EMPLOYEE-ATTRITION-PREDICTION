@@ -1,6 +1,6 @@
 Employee Attrition Prediction System
  Project Overview
-
+ 
 The Employee Attrition Prediction System is a Machine Learning-based web application designed to predict whether an employee is likely to leave an organization.
 
 The system analyzes employee-related factors such as age, monthly income, job level, years at the company, job satisfaction, work-life balance, overtime, distance from home, and other workplace-related attributes.
